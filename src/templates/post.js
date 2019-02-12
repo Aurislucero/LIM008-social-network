@@ -11,7 +11,7 @@ export const cargarPublicaciones = () => {
             <textarea type= "textfield" id="id-publicacion" class="id-publicacion" cols="50" rows="5"  autofocus placeholder="publica aqui" ></textarea>
             <button id = "id-save">guardar</button>
             </div>
-            <select>
+            <select id="selectPrivacidad">
                     <option value="Publico">Publico</option>
                     <option value="Privado">Privado</option>
             </select>
