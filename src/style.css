@@ -1,53 +1,36 @@
-* {
-  font-family: 'Merienda', cursive;
-}
-
 /* Estilos formulario login */
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Merienda');
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
+  font-family: 'Merienda', cursive;
 }
 body{
   font-family: 'open Sans',sans-serif;
-  /*background-image: url(../img/fondo-pantalla.jpg);*/
   background-attachment: fixed;
   background-size: 100vw 100vh;
 }
-/*estilo al header de la pantalla principal*/
+/*Estilo al header de la pantalla principal*/
 header{
   width: 100%;
-    height: 50px; 
-    background:#7f0000;
-    color: rgb(247, 241, 241);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
+  height: 50px; 
+  background:#7f0000;
+  color: rgb(247, 241, 241);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
 }
-.contendor{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  }
-  .bienvenidx{
-  font-family: 'Dancing Script', cursive;
-  font-family: 'Merienda', cursive;
+.bienvenido{
   color: white;
-  }
+  padding: 5px;
+}
 h1{ 
   float: left;
 }
-header .contendor{
-  display: table;
-}
 #btn-menu{
   display: none;
-}
-.error {
-  color: red;
-  text-align: center;
 }
 header label{
   float: right;
@@ -82,28 +65,7 @@ header label{
 #btn-menu:checked ~ .menu {
   transform: translateX(0);
 }
-.formPost{
-  margin-top: 20px;
-  padding: 20px;
-}
-/* MODO RESPONDIVE TABLET */
-@media (min-width:900px){
-.menu{
-  position: static;
-  width:auto;
-  height: auto;
-  transform:translateX(0%);
-  float: right;
-  display: flex;
-}
-.menu a{
-  border: none;
-}
-header label{
-  display: none;
-}
-}
-/*dandole estilo al inicio de sesion*/
+/*Inicio de sesion*/
 .iniciar-sesion{
   margin: auto;
   width: 70%;
@@ -172,82 +134,71 @@ header label{
 .form,.btn-login,#btn-google,#btn-facebook, #btn-registrate:active{
   transform: scale(0.95);
 }
-/* MODO RESPONsIVE CELULAR */
-@media(max-width:780px){
-  .form{
-    max-width: 100%;
-    max-height: 90%;
-  }
-  .iniciar-sesion{
-    margin: auto;
-    width: 90%;
-    max-width: 500px;
-    margin-top: 10%;
-  }
+.error {
+  color: red;
+  text-align: center;
 }
-  /*dandole estilo a registrarse*/
-  .text-boton-post{
-    display: flex;
+  /*Estilos de registro*/
+.text-boton-post{
+  display: flex;
   }
-  .id-save{
-    width: 60px;
+.id-save{
+  width: 60px;
   }
-  .registrarse{
-    margin: auto;
-    width: 70%;
-    max-width: 500px;
-    background: rgba(236, 228, 183, 0.74);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background: rgba(236, 228, 183, 0.74);
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    margin-top: 6%; 
-  }
-  .logo-registro{
-    margin: auto;
-    width: 100%;
-    max-width: 500px;
-    border-radius: 15px; 
-  }
-  /*dando estilos al contenido post*/
-
-  .contenedor-publicaciones{
-    margin: auto;
-    width: 70%;
-    
-    border-radius: 10px;
-   
-  }
-  .formPost{
-    margin: auto;
-    width: 70%;
-    margin-top: 12%;
-    border-radius: 10px;
-    font-family: 'Merienda', cursive;
-  }
-  .ingresar-post-aqui{
-    margin: auto;
-    width: 70%;
-    font-family: 'Merienda', cursive;
-  }
-  .info-post{
-    background: rgba(221, 215, 215, 0.74);
-    box-shadow: inset 0px 4px 4px rgba(163, 29, 29, 0.74);
-    padding: 10px;
-    margin-top: 25px;
-    border-radius: 10px;
-    font-family: 'Dancing Script', cursive;
-    font-family: 'Merienda', cursive; 
+.registrarse{
+  margin: auto;
+  width: 70%;
+  max-width: 500px;
+  background: rgba(236, 228, 183, 0.74);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: rgba(236, 228, 183, 0.74);
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 6%; 
 }
-  
-  .btn-like,.btn-eliminar,.btn-editar{
-    width: 40px;
-    height: auto;
-    padding: 0 5px;
-    cursor: pointer;
-  }
+.logo-registro{
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px; 
+}
+/*Estilos contenido post*/
+.contenedor-publicaciones{
+  margin: auto;
+  width: 70%;
+  border-radius: 10px;
+}
+.formPost{
+  margin-top: 20px;
+  padding: 20px;
+  margin: auto;
+  width: 70%;
+  margin-top: 12%;
+  border-radius: 10px;
+  font-family: 'Merienda', cursive;
+}
+.ingresar-post-aqui{
+  margin: auto;
+  width: 70%;
+  font-family: 'Merienda', cursive;
+}
+.info-post{
+  background: rgba(221, 215, 215, 0.74);
+  box-shadow: inset 0px 4px 4px rgba(163, 29, 29, 0.74);
+  padding: 10px;
+  margin-top: 25px;
+  border-radius: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Merienda', cursive; 
+}
+.btn-like,.btn-eliminar,.btn-editar{
+  width: 40px;
+  height: auto;
+  padding: 0 5px;
+  cursor: pointer;
+}
 #id-save,select{
   border-radius: 5px;
   background-color:#7f0000;
@@ -255,6 +206,9 @@ header label{
   border: none;
   font-family: 'Dancing Script', cursive;
   font-family: 'Merienda', cursive;
+}
+#id-save{
+  width: 100px;
 }
 .btn-editar,.btn-GuardarCambios{
   width: 60px;
@@ -266,9 +220,9 @@ header label{
   font-family: 'Dancing Script', cursive;
   font-family: 'Merienda', cursive;
   }
-  .btn-eliminar{
-    background-image: url("img/garbage.png");
-  }
+.btn-eliminar{
+  background-image: url("img/garbage.png");
+}
 .btn-editar{
   display: inline;
 }
@@ -284,8 +238,53 @@ header label{
 }
 .contenedor-mensaje{
   resize: none;
+  width: 100%;
+  height: 50px;
 }
-
-  
-    
- 
+#id-MensajeError{
+  font-size: 12px;
+  color: red;
+}
+/*Estilos contenido perfil*/
+#id-publicacion{
+  display: block
+}
+.miPerfil{
+  margin-top: 60px;
+  padding: 30px;
+} 
+.foto-perfil{
+  width: 20%;
+  border-radius: 500px;
+}
+/* MODO RESPONSIVE PC */
+@media (min-width:900px){
+  /* Header*/
+    .menu{
+      position: static;
+      width:auto;
+      height: auto;
+      transform:translateX(0%);
+      float: right;
+      display: flex;
+    }
+    .menu a{
+      border: none;
+    }
+    header label{
+      display: none;
+    }
+  }
+/* MODO RESPONSIVE TABLET */
+@media(max-width:780px){
+  .form{
+    max-width: 100%;
+    max-height: 90%;
+  }
+  .iniciar-sesion{
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 10%;
+  }
+}

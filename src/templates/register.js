@@ -9,9 +9,9 @@ export const registrarCuenta = () => {
      <fieldset>
        <span class='titulo-registrarse'>Regístrate con tu direccion de correo electronico</span>
        <h4 id='error-registrarse' class='error'></h4>
-       <input class='form' type='text' name='nombres' placeholder='Nombres'></input>
-       <input class='form' type='text' name='correo' placeholder='Correo electrónico'></input>
-       <input class='form' type='password' name='contrasena' placeholder='Contraseña'></input>
+       <input class='form' type='text' name='nombres' placeholder='Nombres'>
+       <input class='form' type='text' name='correo' placeholder='Correo electrónico'>
+       <input class='form' type='password' name='contrasena' placeholder='Contraseña'>
        <button class='btn-login' id='btn-register' type='submit'><span>REGISTRATE</span></button>
      </fieldset>
    </form>

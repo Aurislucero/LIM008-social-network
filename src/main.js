@@ -11,6 +11,5 @@ const init = () => {
       };
       firebase.initializeApp(config);
     initRouter();
-    
 }
 window.addEventListener('load', init)

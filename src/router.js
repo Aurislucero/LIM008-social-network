@@ -1,9 +1,8 @@
 import { iniciarSesion } from './templates/login.js';
-import { menuNavegacionHome } from './templates/network.js';
 import { registrarCuenta } from './templates/register.js';
+import { menuNavegacionHome } from './templates/network.js';
 import { cargarPublicaciones } from './templates/post.js';
 import { cargarMiPerfil } from './templates/myprofile.js';
-
 
 const cambiarTmp = (hash) => {
   if (hash === '#/' || hash === '' || hash === '#') {
@@ -20,15 +19,15 @@ const vistaTmp = (routers) => {
   const root = document.getElementById('root');
   root.innerHTML = '';
   switch (router) {
-    case 'home':
-      root.appendChild(menuNavegacionHome());
-      root.appendChild(cargarPublicaciones());
-      break;
     case 'login':
       root.appendChild(iniciarSesion());
       break;
     case 'signup':
       root.appendChild(registrarCuenta());
+      break;
+    case 'home':
+      root.appendChild(menuNavegacionHome());
+      root.appendChild(cargarPublicaciones());
       break;
     case 'myprofile':
       root.appendChild(menuNavegacionHome());

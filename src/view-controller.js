@@ -133,18 +133,26 @@ export const cerrarSesionClick = () => {
 
 export const guardarConClick = (event) => {
     event.preventDefault();
-    const user = firebase.auth().currentUser;
-    const photoUser = user.photoURL;
-    const nameUser = user.displayName;
-    const valorMensaje = document.getElementById("id-publicacion").value;
-    let likes =  0;
-    let privacidad = "privado";
-        return agregarPost(photoUser, nameUser, valorMensaje,likes, privacidad);
+    const inputMensaje = document.getElementById("id-publicacion").value;
+    if (inputMensaje === ""){
+        document.getElementById('id-MensajeError').innerHTML = "Para publicar es necesario que ingreses un texto";
+    }else{
+        document.getElementById('id-MensajeError').innerHTML = "";
+        const user = firebase.auth().currentUser;
+        const photoUser = user.photoURL;
+        const nameUser = user.displayName;
+        const valorMensaje = document.getElementById("id-publicacion").value;
+        let likes =  0;
+        const privacidad = document.getElementById("id-privacidad").value;
+        return agregarPost(photoUser, nameUser, valorMensaje,likes,privacidad);
+    }
 }
 
 export const eliminarMensajeConClick = (event) =>{
-    event.preventDefault();
-    eliminarPost(event.target.id);
+    if (confirm("Estas seguro de eliminar este mensaje") == true){
+        event.preventDefault();
+        eliminarPost(event.target.id);
+    }    
 }
 export const editarMensajeConClick = (event) =>{
     event.preventDefault();
